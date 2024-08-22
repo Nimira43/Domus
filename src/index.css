@@ -13,6 +13,13 @@
   --grey-d: #333;
   --grey-m: #888;
   --grey-l: #ccc;
+  --xxs: 1px;
+  --xs: 3px;
+  --sm: 5px;
+  --md: 8px;
+  --lg: 10px;
+  --xl: 12px;
+  --xxl: 16px
 }
 
 body {
