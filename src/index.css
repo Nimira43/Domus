@@ -1,6 +1,33 @@
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=League+Spartan:wght@100..900&display=swap');
 
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --primary: #ff4500;
+  --secondary: #36bcf0;
+  --dark: #111;
+  --light: #eee;
+  --grey-d: #333;
+  --grey-m: #888;
+  --grey-l: #ccc;
+}
+
 body {
   font-family: 'League Spartan';
-  font-weight: 200;
+  background-color: var(--dark);
+}
+
+.logo {
+  font-family: 'Great Vibes', cursive;
+  color: var(--primary);
+  font-weight: lighter;
+  letter-spacing: 1px;;
+}
+
+h2 {
+  color: var(--secondary);
+  font-weight: 100;
 }
