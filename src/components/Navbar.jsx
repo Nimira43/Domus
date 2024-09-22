@@ -6,23 +6,68 @@ import { ReactComponent as PersonOutlineIcon } from '../assets/svg/personOutline
 function Navbar() {
   const navigate = useNavigate()
   const location = useLocation()
+  const pathMatchRoute = (route) => {
+    if (route === location.pathname) {
+      return true
+    }
+  }
 
   return(
     <footer className='navbar'>
       <nav className="navbarNav">
         <ul className="navbarListItems">
-          <li className="navbarListItem" onClick={() => navigate('/')}>
-            <ExploreIcon fill='#111' width='36px' height='36px' />
-            <p>Explore</p>
+          
+          <li className="navbarListItem" onClick={() => navigate('/')}>         
+            <ExploreIcon
+              fill={pathMatchRoute('/')
+                ? '#111'
+                : '#999'}
+              width='36px'
+              height='36px' />
+            <p
+              className={
+                pathMatchRoute('/')
+                  ? 'navbarListItemNameActive'
+                  : 'navbarListItemName'}
+            >
+              Explore
+            </p>
           </li>
-          <li className="navbarListItem" onClick={() => navigate('/offers')}>
-            <OfferIcon fill='#111' width='36px' height='36px' />
-            <p>Offer</p>
+          
+          <li className="navbarListItem" onClick={() => navigate('/offer')}>
+            <OfferIcon
+              fill={pathMatchRoute('/offer')
+                ? '#111'
+                : '#999'} width='36px' height='36px'
+            />
+            <p
+              className={
+                pathMatchRoute('/offer')
+                  ? 'navbarListItemNameActive'
+                  : 'navbarListItemName'}
+            >
+              Offer
+            </p>
           </li>
+          
           <li className="navbarListItem" onClick={() => navigate('/profile')}>
-            <PersonOutlineIcon  fill='#111' width='36px' height='36px' />
-            <p>Profile</p>
+            <PersonOutlineIcon
+              fill={pathMatchRoute('/profile')
+                ? '#111'
+                : '#999'}
+              width='36px'
+              height='36px'
+            />
+            <p
+              className={
+                pathMatchRoute('/profile')
+                  ? 'navbarListItemNameActive'
+                  : 'navbarListItemName'}
+            >
+              Profile
+            </p>
           </li>
+
         </ul>
       </nav>
 
